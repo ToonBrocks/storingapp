@@ -2,6 +2,7 @@
 
 //Variabelen vullen
 $attractie = $_POST['attractie'];
+$group = $_POST['group']
 $capaciteit = $_POST['capaciteit']; 
 $melder = $_POST['melder'];
 
@@ -22,3 +23,5 @@ $statement->execute([
     ":capaciteit" => $capaciteit,
     ":melder" => $melder
 ]);
+
+header = "../meldignen/index.php?msg=Melding Opgeslagen"

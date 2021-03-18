@@ -21,7 +21,12 @@
             </div>
             <div class="form-group">
                 <label for="type">Type</label>
-                <!-- hier komt een dropdown -->
+                <select name="group" id="group">
+                    <option value=""> - Kies je klas - </option>
+                    <option value="A">RIO4-AMO1A</option>
+                    <option value="B">RIO4-AMO1B</option>
+                    <option value="C">RIO4-AMO1C</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="capaciteit">Capaciteit p/uur:</label>
