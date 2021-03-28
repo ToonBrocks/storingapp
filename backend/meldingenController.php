@@ -2,7 +2,7 @@
 
 //Variabelen vullen
 $attractie = $_POST['attractie'];
-$group = $_POST['group']
+$group = $_POST['group'];
 $capaciteit = $_POST['capaciteit']; 
 $melder = $_POST['melder'];
 
@@ -12,7 +12,7 @@ echo $attractie . " / " . $capaciteit . " / " . $melder;
 require_once 'conn.php';
 
 //2. Query
-$query = "INSERT INTO meldingen (attractie, capaciteit, melder) VALUES (:attractie, :capaciteit, :melder)";
+$query = "INSERT INTO meldingen (attractie, group, capaciteit, melder) VALUES (:attractie, :group, :capaciteit, :melder)";
 
 //3. Prepare
 $statement = $conn ->prepare($query);
@@ -20,8 +20,9 @@ $statement = $conn ->prepare($query);
 //4. Execute
 $statement->execute([
     ":attractie" => $attractie,
+    ":group" => $group,
     ":capaciteit" => $capaciteit,
     ":melder" => $melder
 ]);
 
-header = "../meldignen/index.php?msg=Melding Opgeslagen"
+header("../meldignen/index.php?msg=Melding Opgeslagen");
