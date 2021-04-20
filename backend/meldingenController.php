@@ -56,4 +56,5 @@ $statement->execute([
     ":overig" => $overig,
 ]);
 
-header("../meldignen/index.php?msg=Melding Opgeslagen");
+
+header("location:../meldignen/index.php?msg=Melding Opgeslagen");
